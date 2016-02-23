@@ -1,0 +1,8 @@
+php:
+    build: images/centos
+    command: "/usr/sbin/httpd -DFOREGROUND"
+    volumes:
+        - "/home/saitama/Code/php/examplephp533:/var/www/html/"
+    working_dir: /var/www/html
+    ports:
+        - "8000:80"
