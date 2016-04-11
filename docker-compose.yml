@@ -1,8 +1,9 @@
 php:
-    build: images/centos
-    command: "/usr/sbin/httpd -DFOREGROUND"
-    volumes:
-        - "/home/saitama/Code/php/examplephp533:/var/www/html/"
-    working_dir: /var/www/html
-    ports:
-        - "8000:80"
+  build: images/centos
+  volumes:
+    - "/home/cristian/Docker/dockerphp533/Code/reporttv-ws:/var/www/html"
+    - "/home/cristian/Docker/dockerphp533/bin/composer.phar:/usr/local/bin/composer"
+    - "/home/cristian/Docker/dockerphp533/conf/php.ini:/etc/php.ini"
+  working_dir: /var/www/html
+  ports:
+    - "80:80"
